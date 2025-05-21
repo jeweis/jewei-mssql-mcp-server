@@ -10,7 +10,7 @@ readme = "README.md"
 authors = [
     {name = "Jewei", email = "jewei@jeweis.com"},
 ]
-license = {text = "MIT"}
+license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -21,7 +21,7 @@ classifiers = [
 dependencies = [
     "fastmcp>=0.1.0",
     "sqlalchemy>=1.4.0",
-    "pyodbc==5.1.0",
+    "pyodbc>=4.0.30",
     "python-dotenv>=0.19.0",
 ]
 requires-python = ">=3.8"
