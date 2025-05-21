@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jewei-mssql-mcp-server"
-version = "0.1.0"
+version = "0.1.1"
 description = "SQL Server MCP服务器，用于执行SQL查询和表结构查询"
 readme = "README.md"
 authors = [
