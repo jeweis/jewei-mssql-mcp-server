@@ -31,10 +31,10 @@ requires-python = ">=3.8"
 "Bug Tracker" = "https://github.com/jeweis/jewei-mssql-mcp-server/issues"
 
 [project.scripts]
-jewei-mssql-mcp-server = "server:main"
+"jewei-mssql-mcp-server" = "server:main"
 
 [tool.setuptools]
-package-dir = {"": "."}
+package-dir = {"" = "."}
 
 [tool.setuptools.packages.find]
 where = ["."]

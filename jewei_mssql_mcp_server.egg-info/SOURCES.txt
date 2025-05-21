@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+jewei_mssql_mcp_server.egg-info/PKG-INFO
+jewei_mssql_mcp_server.egg-info/SOURCES.txt
+jewei_mssql_mcp_server.egg-info/dependency_links.txt
+jewei_mssql_mcp_server.egg-info/entry_points.txt
+jewei_mssql_mcp_server.egg-info/requires.txt
+jewei_mssql_mcp_server.egg-info/top_level.txt
