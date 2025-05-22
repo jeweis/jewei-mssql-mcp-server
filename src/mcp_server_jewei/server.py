@@ -101,9 +101,9 @@ def introduction_prompt(
 def main():
     """主函数，用于启动MCP服务器"""
     print("启动 MSSQL MCP 服务器...")
-    # mcp.run()
+    mcp.run()
     # To use a different transport, e.g., HTTP:
-    mcp.run(transport="streamable-http", host="127.0.0.1", port=9000)
+    # mcp.run(transport="streamable-http", host="127.0.0.1", port=9000)
 
 if __name__ == "__main__":
     main()
