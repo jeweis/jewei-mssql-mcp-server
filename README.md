@@ -20,6 +20,62 @@
 - **Microsoft SQL Server**：目标数据库系统
 - **MCP协议**：用于客户端与服务器之间的通信
 
+## MCP 配置
+
+本项目支持通过多种客户端配置 MCP 服务器，以便与各种 IDE 或工具集成。以下是一些常见客户端的配置示例：
+
+### Windsurf / Cursor / Claude
+
+对于基于 Windsurf 框架的客户端（如 Cursor 和 Claude），您可以在 `~/.codeium/windsurf/mcp_config.json` 文件中配置 MCP 服务器。以下是一个示例配置：
+
+```json
+{
+  "mcpServers": {
+    "jewei-mssql": {
+      "disabled": false,
+      "command": "uvx",
+      "args": [
+        "jewei-mssql-mcp-server"
+      ],
+      "env": {
+        "DB_HOST": "your_db_host",
+        "DB_USER": "your_db_user",
+        "DB_PASSWORD": "your_db_password",
+        "DB_NAME": "your_db_name"
+      }
+    }
+  }
+}
+```
+
+请将 `your_db_host`, `your_db_user`, `your_db_password`, 和 `your_db_name` 替换为您的实际数据库连接信息。
+
+### Cline
+
+对于 Cline 客户端，您可以在其配置文件中添加类似的 MCP 服务器配置。具体的配置方式请参考 Cline 的官方文档。通常，您需要指定服务器的名称、命令、参数和环境变量。
+
+```json
+// Cline 配置文件示例 (具体格式请参考 Cline 文档)
+{
+  "mcpServers": {
+    "jewei-mssql": {
+      "command": "uvx",
+      "args": [
+        "jewei-mssql-mcp-server"
+      ],
+      "env": {
+        "DB_HOST": "your_db_host",
+        "DB_USER": "your_db_user",
+        "DB_PASSWORD": "your_db_password",
+        "DB_NAME": "your_db_name"
+      }
+    }
+  }
+}
+```
+
+请将示例中的占位符替换为您的实际数据库连接信息，并根据 Cline 的具体配置格式进行调整。
+
 ## 安装与配置
 
 ### 前提条件
@@ -33,7 +89,7 @@
 #### 方法一：通过PyPI安装（推荐）
 
 ```bash
-pip install jewei-mssql-mcp-server==0.1.4
+pip install jewei-mssql-mcp-server
 ```
 
 #### 方法二：从源码安装
