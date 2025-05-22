@@ -30,6 +30,14 @@
 
 ### 安装步骤
 
+#### 方法一：通过PyPI安装（推荐）
+
+```bash
+pip install jewei-mssql-mcp-server
+```
+
+#### 方法二：从源码安装
+
 1. 克隆本仓库
    ```bash
    git clone [仓库URL]

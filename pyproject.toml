@@ -1,41 +1,53 @@
-[build-system]
-requires = ["setuptools>=42", "wheel"]
+in[build-system]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mcp_server_jewei*"]
 
 [project]
 name = "jewei-mssql-mcp-server"
-version = "0.1.1"
-description = "SQL Server MCP服务器，用于执行SQL查询和表结构查询"
-readme = "README.md"
+version = "0.1.3"
 authors = [
-    {name = "Jewei", email = "jewei@jeweis.com"},
+  {name = "Jewei", email = "jewei@jeweis.com"},
 ]
-license = "MIT"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-    "Topic :: Database :: Database Engines/Servers",
-    "Topic :: Software Development :: Libraries :: Python Modules",
-]
-dependencies = [
-    "fastmcp>=0.1.0",
-    "sqlalchemy>=1.4.0",
-    "pyodbc>=4.0.30",
-    "python-dotenv>=0.19.0",
-]
+description = "MSSQL MCP服务器，用于执行Microsoft SQL Server的数据查询和表结构查询操作"
+readme = "README.md"
 requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Database :: Database Engines/Servers",
+]
 
 [project.urls]
-"Homepage" = "https://github.com/jeweis/jewei-mssql-mcp-server"
-"Bug Tracker" = "https://github.com/jeweis/jewei-mssql-mcp-server/issues"
+Homepage = "https://github.com/jeweis/jewei-mssql-mcp-server"
+Repository = "https://github.com/jeweis/jewei-mssql-mcp-server"
+Issues = "https://github.com/jeweis/jewei-mssql-mcp-server/issues"
+
+[project.keywords]
+keywords = ["mcp", "sql-server", "mssql", "database", "query"]
+
+# 依赖声明
+dependencies = [
+  "fastmcp>=0.1.0",
+  "sqlalchemy>=1.4.0",
+  "pyodbc>=4.0.30",
+  "python-dotenv>=0.19.0",
+  "mcp[cli]>=1.0.0",
+]
+
+# 开发依赖（可选）
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "ruff>=0.5.4",
+]
 
 [project.scripts]
-"jewei-mssql-mcp-server" = "server:main"
-
-[tool.setuptools]
-package-dir = {"" = "."}
-
-[tool.setuptools.packages.find]
-where = ["."]
-exclude = ["tests*", "docs*"]
+jewei-mssql-mcp-server = "src.mcp_server_jewei.server:main"
