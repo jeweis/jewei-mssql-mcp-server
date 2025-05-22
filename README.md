@@ -33,7 +33,7 @@
 #### 方法一：通过PyPI安装（推荐）
 
 ```bash
-pip install jewei-mssql-mcp-server
+pip install jewei-mssql-mcp-server==0.1.4
 ```
 
 #### 方法二：从源码安装
