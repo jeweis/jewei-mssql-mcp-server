@@ -5,13 +5,13 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools]
 package-dir = {"" = "src"}
 
-[tool.setuptools.packages.find]
-where = ["src"]
-include = ["mcp_server_jewei*"]
+[tool.setuptools.packages]
+find = {where = ["src"]}
+
 
 [project]
 name = "jewei-mssql-mcp-server"
-version = "0.1.5"
+version = "0.1.6"
 authors = [
   {name = "Jewei", email = "jewei@jeweis.com"},
 ]
