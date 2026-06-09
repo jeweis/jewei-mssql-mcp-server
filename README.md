@@ -1,3 +1,8 @@
+> ⚠️ **注意**：本仓库已迁移至新的地址  
+> [jewei-mcp-mssql](https://github.com/jeweis/jewei-mcp-mssql)。  
+> 请前往新仓库获取最新更新和维护版本。
+
+
 # Jewei MSSQL MCP 服务器
 
 ## 项目简介
